@@ -1,15 +1,12 @@
-import { useState } from "react";
+import { LoadingIndicator } from './components/objects/LoadingIndicator';
+import { IntroSection, ResultSection } from './sections';
 
 function App() {
-  const [counter, setCounter] = useState(0);
-  const onClick = () => {
-    setCounter(counter + 1);
-  }
-
   return (
     <div className="App">
-      <button onClick={onClick}>+</button>
-      {counter}
+      <LoadingIndicator />
+      <IntroSection />
+      <ResultSection />
     </div>
   );
 }
