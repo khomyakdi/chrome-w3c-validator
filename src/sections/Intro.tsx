@@ -11,7 +11,7 @@ const IntroSection = () => {
     setLoading(true);
     const source = await getSource();
     const result = await getValidationFromApi(source);
-    console.log(result);
+    
     setResult(result.messages);
     setLoading(false);
   };
