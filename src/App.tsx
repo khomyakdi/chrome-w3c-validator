@@ -1,3 +1,4 @@
+import './General.scss';
 import { LoadingIndicator } from './components/objects/LoadingIndicator';
 import { IntroSection, ResultSection } from './sections';
 

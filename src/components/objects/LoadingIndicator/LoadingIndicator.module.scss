@@ -1,0 +1,30 @@
+.indicator {
+  height: 6px;
+  background: #f3f3f3;
+  overflow: hidden;
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  &::after {
+    content: '';
+    display: block;
+    background: rgb(226, 92, 92);
+    width: 30%;
+    height: 3px;
+    margin:1px;
+    animation: spinner 1600ms linear infinite;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    width: 30%;
+    transform: translateX(-80%);
+  }
+  100% {
+    width: 60%;
+    transform: translateX(300%);
+  } 
+}

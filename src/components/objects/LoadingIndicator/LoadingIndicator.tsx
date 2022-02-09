@@ -1,3 +1,4 @@
+import styles from './LoadingIndicator.module.scss';
 import { useContext } from "react";
 import { AppContext } from "../../../AppBehavior";
 
@@ -7,7 +8,7 @@ const LoadingIndicator = () => {
   if(!loading)
     return null;
 
-  return <div>loading</div>;
+  return <div className={styles.indicator}/>;
 };
 
 export default LoadingIndicator;
