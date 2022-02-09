@@ -33,6 +33,13 @@ export async function getInvalidSource() {
     <li>3</li>
     <div>4</div>
   </ul>
+  <table>
+  <tbody>
+    <tr role="row">
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 </body>
 
 </html>
