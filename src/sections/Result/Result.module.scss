@@ -8,3 +8,29 @@
   font-family: Arial, sans-serif;
   margin: 0.5em 0 0.5em 0;
 }
+
+.general {
+  width: 100%;
+  border-collapse: collapse;
+
+  caption,
+  th,
+  td {
+    text-align: left;
+    padding: 0.5em;
+  }
+  th,
+  td {
+    width: 50%;
+  }
+
+  th {
+    padding-left: 1em;
+  }
+}
+
+@media (min-width: 450px) {
+  .general {
+    width: 50%;
+  }
+}

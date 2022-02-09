@@ -1,3 +1,4 @@
+import styles from './Result.module.scss';
 import { ValidationMessage } from "../../types";
 
 type Props = {
@@ -19,9 +20,8 @@ function GeneralInfo({ result }: Props) {
   });
 
   return (
-    <div>
-      <table>
-        <caption>Result General Info.</caption>
+      <table className={styles.general}>
+        <caption>General Info:</caption>
         <tbody>
           <tr>
             <th scope="row">Warnings</th>
@@ -33,7 +33,6 @@ function GeneralInfo({ result }: Props) {
           </tr>
         </tbody>
       </table>
-    </div>
   );
 }
 
