@@ -1,22 +1,12 @@
 import React, { createContext, useState } from "react"
+import { ValidationMessage } from "./types";
 
-type ValidationMessage = {
-  type: string;
-  lastLine: number;
-  lastColumn: number;
-  firstColumn: number;
-  message: string;
-  extract: string;
-  hiliteStart: number;
-  hiliteLength: number;
-};
 type ValidationResult = ValidationMessage[];
 
 type AppState = {
   loading: boolean;
   result?: ValidationResult;
 };
-
 
 const defaultState: AppState = {
   loading: false,
