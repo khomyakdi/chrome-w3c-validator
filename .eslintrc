@@ -4,15 +4,32 @@
   "plugins": [
     "@typescript-eslint"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
   "rules": {
     "no-async-promise-executor": "off",
     "indent": ["error", 2],
     "@typescript-eslint/no-empty-function": ["off"],
-    "semi": [2, "always"]
+    "semi": [2, "always"],
+    "react/react-in-jsx-scope": "off"
+  },
+  "globals": {
+    "fetch": false,
+    "document": false,
+    "chrome": false,
+    "XMLSerializer": false,
+    "HTMLParagraphElement": false,
+    "React": false,
+    "HTMLButtonElement": false 
   }
 }

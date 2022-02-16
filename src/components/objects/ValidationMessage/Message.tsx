@@ -48,7 +48,7 @@ function getClassNameByType(type: 'error' | 'warning' | 'Info') {
     error: styles.error,
     warning: styles.warning,
     Info: styles.info,
-  }
+  };
 
   return classNames[type];
 }

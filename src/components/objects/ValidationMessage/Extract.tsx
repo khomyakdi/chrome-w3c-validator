@@ -21,7 +21,7 @@ function Extract({
       <span className={styles.highlighted}>{highlightedPart}</span>
       {lastPart}
     </code>
-  )
+  );
 }
 
-export default Extract
+export default Extract;

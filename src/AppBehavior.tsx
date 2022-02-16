@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react"
+import React, { createContext, useState } from "react";
 import { ValidationMessage } from "./types";
 
 type ValidationResult = ValidationMessage[];
@@ -20,7 +20,7 @@ type AppActions = {
 const defaultActions: AppActions = {
   setLoading: () => {},
   setResult: () => {},
-}
+};
 
 type Context = {
   state: AppState,
@@ -46,12 +46,12 @@ export const AppBehavior: React.FC = ({children}) => {
   const actions: AppActions= {
     setLoading,
     setResult,
-  }
+  };
 
   return (
     <AppContext.Provider value={{state, actions }}>
       {children}
     </AppContext.Provider>
   );
-}
+};
 

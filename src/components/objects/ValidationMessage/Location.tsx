@@ -14,11 +14,11 @@ const Location = (props: Props) => {
     firstColumn,
     lastColumn,
   } = props;
-  const locationString = `From line ${firstLine || lastLine}, column ${firstColumn}; to line ${lastLine}, column ${lastColumn}`
+  const locationString = `From line ${firstLine || lastLine}, column ${firstColumn}; to line ${lastLine}, column ${lastColumn}`;
   
   return (
     <div className={styles.location}>{locationString}</div>
-  )
-}
+  );
+};
 
-export default Location
+export default Location;

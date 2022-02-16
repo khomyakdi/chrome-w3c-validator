@@ -6,4 +6,4 @@ type Props = {
 
 const Type = ({ type }: Props) => <div className={styles.type}>{type}</div>;
 
-export default Type
+export default Type;

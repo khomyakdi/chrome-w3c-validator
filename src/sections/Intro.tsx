@@ -23,7 +23,7 @@ const IntroSection = () => {
       disabled={loading}>
         Check
     </Button>
-  )
+  );
 };
 
 export default IntroSection;
