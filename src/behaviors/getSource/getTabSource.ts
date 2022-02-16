@@ -4,7 +4,7 @@ type Response = {
 }
 
 export async function getTabSource() {
-  return new Promise<string>(async (resolve, _reject) => {
+  return new Promise<string>(async (resolve) => {
     const currentTab = await getCurrentTab();
 
     if(!currentTab || !currentTab.id)
@@ -14,14 +14,14 @@ export async function getTabSource() {
       if(req.action !== "getSource")
         return;
         
-        resolve(req.source);
-      }
-    chrome.runtime.onMessage.addListener(handleGetSource)
+      resolve(req.source);
+    }
+    chrome.runtime.onMessage.addListener(handleGetSource);
     
     chrome.scripting.executeScript({
       target: {tabId: currentTab.id},
       func: requestTabHtml,
-    })
+    });
   });
 }
 
@@ -33,7 +33,7 @@ async function getCurrentTab() {
 }
 
 function requestTabHtml() {
-  const outerHtml =  new XMLSerializer().serializeToString(document);;
+  const outerHtml =  new XMLSerializer().serializeToString(document);
 
   chrome.runtime.sendMessage({
     action: "getSource",

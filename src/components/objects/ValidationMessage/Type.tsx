@@ -4,10 +4,6 @@ type Props = {
   type: 'error' | 'warning' | 'Info';
 };
 
-function Type({ type }: Props) {
-  return (
-    <div className={styles.type}>{type}</div>
-  )
-}
+const Type = ({ type }: Props) => <div className={styles.type}>{type}</div>;
 
 export default Type

@@ -13,15 +13,15 @@ const ResultSection = () => {
     return <EverythingGoodMessage />;
 
   return (
-  <>
-    <ol className={styles.list}>
-    {result.map((message, index) => (
-      <li key={index}>
-        <ValidationMessage message={message} />
-      </li>
-    ))}
-    </ol>
-  </>
+    <>
+      <ol className={styles.list}>
+        {result.map((message, index) => (
+          <li key={index}>
+            <ValidationMessage message={message} />
+          </li>
+        ))}
+      </ol>
+    </>
   );
 };
 

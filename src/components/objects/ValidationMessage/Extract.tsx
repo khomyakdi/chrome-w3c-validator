@@ -11,7 +11,7 @@ function Extract({
   start,
   length,
 }: Props) {
- const firstPart = extract.substring(0, start),
+  const firstPart = extract.substring(0, start),
     highlightedPart = extract.substring(start, start +length),
     lastPart = extract.substring(start + length);
     

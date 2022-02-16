@@ -23,21 +23,21 @@ const Message = ({message}: Props) => {
     });
 
   return (
-  <div className={`${styles.message} ${getClassNameByType(type)}`}>
-    <div className={styles.text}>
-      <Type type={type}/>
-      <p ref={messageRef}>{message.message}</p>
+    <div className={`${styles.message} ${getClassNameByType(type)}`}>
+      <div className={styles.text}>
+        <Type type={type}/>
+        <p ref={messageRef}>{message.message}</p>
+      </div>
+      <Location
+        firstLine={message.firstLine}
+        lastLine={message.lastLine}
+        firstColumn={message.firstColumn}
+        lastColumn={message.lastColumn}
+      />
+      <div>
+        <Extract extract={message.extract} start={message.hiliteStart} length={message.hiliteLength} />
+      </div>
     </div>
-    <Location
-      firstLine={message.firstLine}
-      lastLine={message.lastLine}
-      firstColumn={message.firstColumn}
-      lastColumn={message.lastColumn}
-    /> 
-    <div>
-      <Extract extract={message.extract} start={message.hiliteStart} length={message.hiliteLength} />
-    </div>
-  </div>
   );
 };
 

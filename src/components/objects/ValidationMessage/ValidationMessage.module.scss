@@ -14,7 +14,7 @@
     padding: 2px 4px;
     border: 1px dashed #999;
     font-weight: 400;
-    
+
     .highlighted {
       background-color: #ffff80;
     }
@@ -24,7 +24,7 @@
 .text {
   font-weight: 700;
   font-size: 16px;
-  
+
   p {
     display: inline-block;
   }
@@ -46,12 +46,12 @@
   .warning & {
     background-color: #ffc;
   }
-  
+
   .info & {
     background-color: #cfc;
   }
 }
 
-.location { 
+.location {
   text-decoration: underline;
 }
