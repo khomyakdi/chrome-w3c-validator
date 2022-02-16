@@ -27,7 +27,7 @@ export async function getInvalidSource() {
 
 <body>
   <h1>Test sample</h1>
-  <ul>
+  <ul styles="<h1>hello</h1> test">
     <li>1</li>
     <li>2</li>
     <li>3</li>
