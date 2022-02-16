@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import styles from './ValidationMessage.module.scss';
 
 type Props = {
   extract: string;
@@ -15,12 +15,10 @@ function Extract({
     highlightedPart = extract.substring(start, start +length),
     lastPart = extract.substring(start + length);
     
-
-
   return (
     <code>
       {firstPart}
-      <span>{highlightedPart}</span>
+      <span className={styles.highlighted}>{highlightedPart}</span>
       {lastPart}
     </code>
   )

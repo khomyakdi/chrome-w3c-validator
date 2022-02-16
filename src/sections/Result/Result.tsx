@@ -1,6 +1,6 @@
+import styles from './Result.module.scss';
 import { useAppState } from "../../utils/hooks";
 import EverythingGoodMessage from "./EverythingGoodMessage";
-import GeneralInfo from "./GeneralInfo";
 import {ValidationMessage } from "../../components/objects/ValidationMessage";
 
 const ResultSection = () => {
@@ -13,16 +13,15 @@ const ResultSection = () => {
     return <EverythingGoodMessage />;
 
   return (
-  <div>
-    <GeneralInfo result={result} />
-    <ul>
+  <>
+    <ol className={styles.list}>
     {result.map((message, index) => (
       <li key={index}>
         <ValidationMessage message={message} />
       </li>
     ))}
-    </ul>
-  </div>
+    </ol>
+  </>
   );
 };
 

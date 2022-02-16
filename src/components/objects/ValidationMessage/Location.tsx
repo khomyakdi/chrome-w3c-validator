@@ -1,3 +1,5 @@
+import styles from './ValidationMessage.module.scss';
+
 type Props = {
   firstLine: number;
   lastLine: number;
@@ -15,7 +17,7 @@ const Location = (props: Props) => {
   const locationString = `From line ${firstLine || lastLine}, column ${firstColumn}; to line ${lastLine}, column ${lastColumn}`
   
   return (
-    <div>{locationString}</div>
+    <div className={styles.location}>{locationString}</div>
   )
 }
 
