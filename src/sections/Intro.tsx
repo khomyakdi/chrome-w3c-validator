@@ -17,14 +17,12 @@ const IntroSection = () => {
   };
 
   return (
-    <div>
      <Button
         onClick={loading ? undefined : onClick}
         aria-disabled={loading}
         disabled={loading}>
         Check
-      </Button> 
-    </div>
+      </Button>
   )
 };
 
