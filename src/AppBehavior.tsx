@@ -6,6 +6,7 @@ type ValidationResult = ValidationMessage[];
 type AppState = {
   loading: boolean;
   result?: ValidationResult;
+  source?: string;
 };
 
 const defaultState: AppState = {
@@ -15,11 +16,14 @@ const defaultState: AppState = {
 type AppActions = {
   setLoading: React.Dispatch<React.SetStateAction<boolean>>
   setResult: React.Dispatch<React.SetStateAction<ValidationResult | undefined>>
+  setSource: React.Dispatch<React.SetStateAction<string | undefined>>
+
 };
 
 const defaultActions: AppActions = {
   setLoading: () => {},
   setResult: () => {},
+  setSource: () => {},
 };
 
 type Context = {
@@ -37,15 +41,17 @@ export const AppContext = createContext(defaultContext);
 export const AppBehavior: React.FC = ({children}) => {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<ValidationResult>();
-
+  const [source, setSource] = useState<string>();
   const state = {
     loading,
     result,
+    source,
   };
 
   const actions: AppActions= {
     setLoading,
     setResult,
+    setSource,
   };
 
   return (

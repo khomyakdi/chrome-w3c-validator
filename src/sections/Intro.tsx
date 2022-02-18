@@ -5,7 +5,7 @@ import getSource from '../behaviors/getSource';
 import { Button } from '../components/primitives/Button';
 
 const IntroSection = () => {
-  const { state: { loading }, actions: { setLoading, setResult } } = useContext(AppContext);
+  const { state: { loading }, actions: { setLoading, setResult, setSource } } = useContext(AppContext);
 
   const onClick = async () => {
     setLoading(true);
@@ -13,6 +13,7 @@ const IntroSection = () => {
     const result = await getValidationFromApi(source);
     
     setResult(result.messages);
+    setSource(source);
     setLoading(false);
   };
 
