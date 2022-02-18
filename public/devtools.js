@@ -1,1 +1,1 @@
-chrome.devtools.panels.create('W3C Validator', null, '/index.html', null);
+chrome.devtools.panels.create('W3C Validator build', null, '/index.html', null);
