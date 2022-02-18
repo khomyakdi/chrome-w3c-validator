@@ -44,7 +44,7 @@ function requestTabHtml() {
     return html;
   }
   
-  
+
   function nodeToString(node: Node) {
     switch (node.nodeType) {
     case node.ELEMENT_NODE:
