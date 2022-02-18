@@ -5,19 +5,21 @@ import { useAppState } from "../../../utils/hooks";
 const Source = () => {
   const {source, result, selectedLine } = useAppState();
 
-  if(!source || !result)
-    return null;
+  const rows = useMemo(() => {
+    if(!source || !result)
+      return [];
 
-  const highlightedRows = useMemo(() => {
     const rows = source.split('\n');
 
     return rows;
-
   }, [source, result]);
+  
+  if(!rows)
+    return null;
 
   return (
     <ol className={styles.source}>
-      {highlightedRows.map(
+      {rows.map(
         (row, index) => (
           <li
             key={index}
