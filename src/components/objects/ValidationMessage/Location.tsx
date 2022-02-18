@@ -1,3 +1,4 @@
+import { useAppActions } from '../../../utils/hooks';
 import styles from './ValidationMessage.module.scss';
 
 type Props = {
@@ -14,10 +15,14 @@ const Location = (props: Props) => {
     firstColumn,
     lastColumn,
   } = props;
+  const { setSelectedLine } = useAppActions();
   const locationString = `From line ${firstLine || lastLine}, column ${firstColumn}; to line ${lastLine}, column ${lastColumn}`;
   
+  const onClick = () => setSelectedLine(firstLine || lastLine);
+
   return (
-    <div className={styles.location}>{locationString}</div>
+    <div className={styles.location}>
+      <a onClick={onClick} href={`#sl${firstLine || lastLine}`}>{locationString}</a></div>
   );
 };
 

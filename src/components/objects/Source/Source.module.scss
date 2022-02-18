@@ -1,0 +1,23 @@
+.source {
+  padding-top: 35px;
+  padding-bottom: 25px;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 1.1em;
+}
+
+.selected {
+  text-decoration: underline;
+  background: yellow;
+  animation: highlight 1s 300ms forwards;
+  font-size: 1.2em;
+}
+
+@keyframes highlight {
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: none;
+  }
+}
