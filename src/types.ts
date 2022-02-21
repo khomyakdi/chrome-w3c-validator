@@ -6,7 +6,7 @@ export type ValidationMessage = {
   firstColumn: number;
   lastColumn: number;
   message: string;
-  extract: string;
+  extract?: string;
   hiliteStart: number;
   hiliteLength: number;
 }

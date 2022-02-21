@@ -1,7 +1,7 @@
 import styles from './ValidationMessage.module.scss';
 
 type Props = {
-  extract: string;
+  extract?: string;
   start: number;
   length: number;
 }
@@ -11,6 +11,9 @@ function Extract({
   start,
   length,
 }: Props) {
+  if(!extract)
+    return null;
+  
   const firstPart = extract.substring(0, start),
     highlightedPart = extract.substring(start, start +length),
     lastPart = extract.substring(start + length);
